@@ -1,6 +1,9 @@
 import streamlit as st
 import sys
 import os
+import google.generativeai as genai
+st.write("💡 Model: ", genai.GenerativeModel("gemini-1.5-pro"))
+
 
 # Fix: Add parent directory to sys.path so we can import from `agent/`
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
